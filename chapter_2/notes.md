@@ -13,3 +13,13 @@
 - The "main" function is a critical part of a C program, it get's called automatically when the program is executed.
 
 - The main function returns a value to the OS for error handling.
+
+- A string literal is a series of characters enclosed in double quotation marks, like "apple"
+
+- The "//" notation of the comment was introduced in C99 and terminates after a linebreak. The "/* */" combo preceeds this and ends if the last "*/" is reached.
+
+- Arithmetics on floats might be slower than on ints. And floats maybe approximated when storing them, i.e. 0.1 -> 0.9999999987
+
+- In C89 ALL declarations have to come before the first statement. In C99 this was changed that they have to be declared, before they are used.
+
+- It is said in the book that it is best practice to have a succeeding "f" behind floats: "float foo = 0.5f". Otherwise the compiler might through an error. My search has shown, that this actually specifies the type of float, i.e. "double" or "float" ... and thus is needed to specify which type of float we want.
