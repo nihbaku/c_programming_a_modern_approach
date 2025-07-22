@@ -2,6 +2,8 @@
 
 #include <stdio.h>
 
+#define INCHES_PER_POUND 166
+
 int main(void)
 {
   int weight, height, length, width, volume;
@@ -13,7 +15,7 @@ int main(void)
   printf("Please enter width of the box in inches: ");
   scanf("%d", &width);
   volume = height * width * length;
-  weight = (volume + 165) / 166;        //this is truncation "magic", ints get rounded down in C. volume of 166 gives weight 1. 167 would yield 2!
+  weight = (volume + INCHES_PER_POUND-1) / INCHES_PER_POUND;        //this is truncation "magic", ints get rounded down in C. volume of 166 gives weight 1. 167 would yield 2!
 
   printf("Dimension: %dx%dx%d\n", length, width, height);
   printf("Volume (cubic inches): %d\n", volume);
