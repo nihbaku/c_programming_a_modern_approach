@@ -23,3 +23,15 @@
 - In C89 ALL declarations have to come before the first statement. In C99 this was changed that they have to be declared, before they are used.
 
 - It is said in the book that it is best practice to have a succeeding "f" behind floats: "float foo = 0.5f". Otherwise the compiler might through an error. My search has shown, that this actually specifies the type of float, i.e. "double" or "float" ... and thus is needed to specify which type of float we want.
+
+- A the value that is assigned to a variable is called the initializer. E.g. here ´´´int a = 8´´´ 8 is the initializer.
+
+- If a preprocessor variable contains operators it should be contained within parantheses. For example ´´´ #define RECIPROCAL_OF_PI (1.0f / 3.14159f)
+
+- A variable definition in the preprocessor is also called a macro definition.
+
+- The "names" of variables are actually called identifiers.
+
+- Each preprocessing directive needs to be in its own line.
+
+- Otherwise space (tabs, newline, spaces) is **not** important, aslong as they don't obscure the meaning of tokens. (like in case of keyword "intmain" instead of "int main")
