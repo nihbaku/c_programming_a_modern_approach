@@ -8,3 +8,5 @@ int main(void) //int typ function "main" which takes no arguments (void)
   printf("available for its completion.\n"); //same as above
   return 0; //exit the function returning error code 0, which means no error occurred
 } //closing the funcion body
+
+/* The only directive is the include statement at the top. Statements are the print function and the return function. The main is neither, because it is a function declaration.*/
