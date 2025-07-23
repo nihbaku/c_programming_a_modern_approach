@@ -35,3 +35,17 @@
 - Each preprocessing directive needs to be in its own line.
 
 - Otherwise space (tabs, newline, spaces) is **not** important, aslong as they don't obscure the meaning of tokens. (like in case of keyword "intmain" instead of "int main")
+
+- Splitting string literals into several lines is not allowed.
+
+- Putting the paranthesis of functions and methods into separate lines allows to add more to the functions wihtout searching for where the paranthesis intersects with another token.
+
+- exit(0) and "return 0" are the same when used in the main function and which one to use is a matter of taste.
+
+- In C89 if nothing is returned by main, it returns an undefined value. In C99 if it is "int main" it returns 0 and if it is not "int" it returns an unspecified value.
+
+- The C standard denotes, that every comment has to be replaced by a whitespace, when compiling. So "int a/**/b = 0" becomes "int a b = 0".
+
+- Old style comments can't be nested because the last token will terminated the previous comment. So this: "/* /* */ */" is illegal. Hoqever the newer C99 style comment "//" can nest everything that is contained inside the line, which makes them very useful.
+
+- Floating point numbers that are not succeeded by "f" are stored as double, which has a higher precision (more memory usage).
