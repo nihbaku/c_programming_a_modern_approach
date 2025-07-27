@@ -23,4 +23,13 @@ So the C89 can be calculated as a % b = -(a / b) * b + a with the addition that 
 - (a)  8 % 5  is 3
 - (b) -8 % 5  is -3 or  2
 - (c)  8 % -5 is  3 or -2
-- (d) -8 % -5 is  3
+- (d) -8 % -5 is  -3 or (2? depends on how the truncation with minus signs are treated during -8/(-5); can't check this anymore)
+
+### 6.
+
+Repetition for C99 yields:
+
+- (a)  8 % 5  is 3
+- (b) -8 % 5  is -3
+- (c)  8 % -5 is -3
+- (d) -8 % -5 is -3 
