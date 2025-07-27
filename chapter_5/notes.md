@@ -17,3 +17,15 @@
 - ! is right associtive and && and || are left associative.
 - Compound statement refers to the { } braces which come after ifs and loops which groups several statements as one block together to be executed upon the loop or conditional.
 - The "else if" statement does not actually exist! It is just a convenient way to not nest cascaded if statements too much.
+- The precedence of the conditional operator e1 ? e2 : e3 is one of the lowest there is (expet for assignment =)
+- One can define new Variable types in the preprocessor `#define BOOL int` and then using it like `BOOL flag = 1;` for true. However type definitions or enumerations might be a better way.
+- C99 introduces the `_Bool` type. Which is an unsigned int but can only be assigned 1 or 0. You can write `_Bool flag = 5` however it will be assigned 1.
+- Arithemtic is also allowed on `_Bool` types but not advisable!
+- C99 provides <stdbool.h> which has a macro `bool` for the `_Bool` variable and provides `true` and `false` for 1 and 0.
+- The constant expression in the case statement **must** evaluate to an integer, so only int and characters are allowed.
+- One can put the same statement output for several cases like this `case 4: case 3: case 2: case 1: i = 0; break;`
+- The above is called a fall through and might be handled with a comment for easier readability.
+- A fallthrough is caused because the "controller" goes to the case label matching the value of the switch expression. After it has executed the statement of its label and does not encounter a `break;` it does not evaluate the case labels afterwards but only executes the statements.
+- If no default case is given and the value is not caught by the other cases the switch statement just contiues at the next statement after it.
+- The conditional warning of gcc with `Wparentheses` and `-Wall` can be suppressed by a second set of parantheses like: `if((i=j))`.
+- If in conditional expression int and floats gets mixed the end expression is always of type float, with the respective value.
