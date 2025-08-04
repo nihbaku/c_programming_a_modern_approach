@@ -1,3 +1,4 @@
+/* Technically the solution for the assignment can be done via teenager = age >= 13 && age <= 19*/
 #include <stdio.h>
 #include <stdbool.h>
 
