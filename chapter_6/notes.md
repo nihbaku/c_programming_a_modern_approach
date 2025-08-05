@@ -17,3 +17,15 @@
 - Precedence of the comma operator is less than that of all the other operators.
 - The comma operator can be chained in ways like this: `i = 0, j = 1, i + j`.
 - It is left associative and thus the above expression is chained like this: `(i = 0, j = 1), i + j`
+
+## Loop control
+
+- The `goto` statement can't be used to jump beyond the declaration of a variable length array, since C99.
+- The `goto`statement is useful to exit from nested loops.
+
+## Null statement
+
+- The null statement is just an empty statement: `;`
+- It is best practice to put the null statement on a line by itself.
+- Putting a semicolon after the parenthesis in a loop statement may cause infinite loops or weird behaviour. So always check for that!
+- Alternitives for a null statement for the loop body are stand alone `continue` and an empty compound statement `{}`.
