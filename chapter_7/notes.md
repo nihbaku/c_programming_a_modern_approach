@@ -17,3 +17,22 @@
 ## Floats
 - The characteristics of float storage can be seen in the `<float.h>`
 - By default floating point constants are stored as double precision.
+- For reading and writing double the modifier `l` has to be prepended to the usual `%e`, `%f` and `%g`.
+    - For long double it is `L`.
+
+## Chars
+- ASCII stands for American Standard Code for Information Interchange.
+- Character constants have to be enclosed in single quotes, not double!
+- Character constants in C are treated as small integers. 'a' for example has the value 97.
+- This goes so far that one could actually have the snippet: `int i = 'a'` for it to have the value 97. Because constant chars are always treated as ints internally in C.
+- Characters are ordered (at least in ASCII) and the upper case values come after the lower case values in binary representation. This means we can do simple arithmetics when wanting to go from lower case to upper case chars:
+```
+if ('a' <= ch && ch <= 'z')
+    ch = ch - 'a' + 'A'
+```
+- Also one can use this fact to make loops which goes through all upper case letters. `for(ch = 'A'; ch <= 'Z'; ch++)`.
+- *This can lead to many errors because arithmetics depend on the underlying character set*.
+- The above implementation for switching to upper case is not the fastest. The `<ctypes.h>` provides the `toupper()` function, which is a fster implementation.
+- Chars can also be signed (-128 to 128) or unsigned (0 to 255). Portability is key, use `signed` or unsigned `keyword` wherever possible!
+- If one wants to use special characters one can use an escape sequence followed by a number code in either octal or hexadecimal code. For example the usual ASCII escape can be done via `'\33'` for octal or `'\x1b'` for hexadecimal (does not matter if upper or lower case, x however has to be lower!). 
+
