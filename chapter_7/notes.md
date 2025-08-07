@@ -36,3 +36,6 @@ if ('a' <= ch && ch <= 'z')
 - Chars can also be signed (-128 to 128) or unsigned (0 to 255). Portability is key, use `signed` or unsigned `keyword` wherever possible!
 - If one wants to use special characters one can use an escape sequence followed by a number code in either octal or hexadecimal code. For example the usual ASCII escape can be done via `'\33'` for octal or `'\x1b'` for hexadecimal (does not matter if upper or lower case, x however has to be lower!). 
 
+## Reading and writing Chars
+- When reading characters whitespace is also read by scanf if not specified in the formatting string. 
+- Be careful when mixing getchar() and scanf() since scanf() will leave behing characters which it peaks, but not read will leave behing characters which it peaks, but not read!
