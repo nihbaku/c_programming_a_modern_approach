@@ -39,3 +39,9 @@ if ('a' <= ch && ch <= 'z')
 ## Reading and writing Chars
 - When reading characters whitespace is also read by scanf if not specified in the formatting string. 
 - Be careful when mixing getchar() and scanf() since scanf() will leave behing characters which it peaks, but not read will leave behing characters which it peaks, but not read!
+
+## Type conversion
+- Types get converted to the same type when compared or used for calculations. This can be a problem when comparing an unsigned int with an int of the same size, because the unsigned might be bigger during comparison, since it gets shifted.
+- The casting operator, e.g. `(int) i` has a very high precedence, since it is a unary operator.
+
+## Type definitions
