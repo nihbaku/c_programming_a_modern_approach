@@ -45,3 +45,16 @@ if ('a' <= ch && ch <= 'z')
 - The casting operator, e.g. `(int) i` has a very high precedence, since it is a unary operator.
 
 ## Type definitions
+- Typedefs can make redefining variable types easier later on. Since we only have to change the type in the typedef.
+- One can use typedefs from `<stdint.h>` for example to make more portable code. As an example it has an integer type which is exactly 32 bit long with `int32_t`.
+- The `_t` is usually used for typedefs of the standard C library.
+- Typedefs are scope dependent. This is opposed to macro definitions.
+- Macrodefinitions can be flawed, `#define INT_TO_PTR int * ... INT_TO_PTR p, q, j` here only `p` is an int pointer, the rest are ints! This will not happen with a typedef.
+
+## Sizeof
+-`sizeof` is actually an unary operator! This means for a single expression we do not need parantheses `sizeof i`.
+
+## Misc
+- Hexadecimal floats are very useful for extreme size or precision, since they have exact binary representations.
+- The correct formatting when reading float with scanf is crucial, since it takes a pointer to a variable and has to fit it at the exact point in memory.
+- The correct formatting for printf is not so important, since it will cast floats into doubles anyway.
