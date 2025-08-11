@@ -11,6 +11,8 @@
 - A function declaration just clarifies what values the function takes and what the return type is: `double average(double a, double b);`.
 - The declaration is actually called a *function prototype*.
 - A function prototype does not have to hold the names of the variables. The following definition is also correct `double average(double, double)`.
+- The names of the arguments in the prototype does not have to match the actual definition!
+- Prototypes are very useful. If we would write all functions before main, we would still have to look for the order. Also it would not be possible to have functions calling each other, because one of them was not seen before the other gets called!
 
 ## Arguments
 
